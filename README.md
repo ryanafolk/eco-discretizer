@@ -9,9 +9,21 @@ The script accepts as inputs species list file and predicted niche occupancy pro
 
 The python libraries `numpy`, `scipy`, and `pandas` are required.
 
+It is called like: 
+
+```
+./pno_discretization.py numberOfVariables numberOfSamples numberOfCategories
+```
+
+E.g.,
+
+```
+./pno_discretization.py 12 10000 10
+```
+
 Approach
 ---------
-PNOs are typically the way in which niche models are typically used on phylogenies. There is a problem in that in that the histograms output for different species do not have comparable bins; enforcing common bins across species is not necessarily desireable. Distance metrics for pdfs (probability density functions) can be applied to histograms but may have undesireable properties for non-overlapping pdfs, in that large numbers of ties are expected. Sampling a very large number of points (10,000) from histograms yeilds comparable objects that are very close to the histograms they came from. 
+PNOs are typically the way in which niche models are typically used on phylogenies. There is a problem in that in that the histograms output for different species do not have comparable bins; enforcing common bins across species is not necessarily desireable. Distance metrics for pdfs (probability density functions) can be applied to histograms but may have undesireable properties for non-overlapping pdfs, in that large numbers of ties are expected. Sampling a very large number of points (e.g., 10,000) from histograms yeilds comparable objects that are very close to the histograms they came from. 
 
 From these pools of random points drawn from the histograms, the the cumulative Euclidean distance is calculated for every species pair in the tree, for each environmental predictor variable. Different scalings between variables would bias the result to favor clustering that follows variables with high magnitude and variance, so within each variable distance matrix, each is subtracted from the matrix mean and divided by the range to normalize. Then the individual distance matrices are averaged across variables. Finally, k-means clustering is applied and a csv with the character coding (numerically from 0 to 1-k) is saved.
 
