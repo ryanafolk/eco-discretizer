@@ -5,7 +5,9 @@ Overview
 ---------
 This script uses k-means clustering to discretize predicted niche occupancy profiles (PNOs) from niche models. The point is to convert continuous data to a discrete form that is useful for large numbers of comparative methods that use discrete data.
 
-The script accepts as inputs species list file and predicted niche occupancy profile files, in the exact same format as that used for `ambitus`. These must be in the same directory as the script. The output is a csv containing the species labels and a numeric character coding from 0 to k - 1. The distance matrices (raw and normalized) are also saved in case they are useful for something.
+The script accepts as inputs species list file and predicted niche occupancy profile files, in the exact same format as that used for `ambitus`. These must be in the same directory as the script. The output is a csv containing the species labels and a numeric character coding from 0 to k - 1. 
+
+The distance matrices (raw and normalized) are also saved in case they are useful for something. One idea is to plot the final averaged distance matrix in R, using a plot that makes sense like an MDS analysis. Classification surprises often happen when an individual is intermediate between an expected group and some neighbor.
 
 The python libraries `numpy`, `scipy`, and `pandas` are required.
 
