@@ -3,7 +3,7 @@
 
 Overview
 ---------
-This script uses *k*-means clustering to discretize predicted niche occupancy profiles (PNOs) from niche models. The point is to convert continuous data to a discrete form that is useful for large numbers of comparative methods that use discrete data.
+This script uses *k*-means clustering to discretize climatic datasets. The point is to convert continuous data to a discrete form that is useful for large numbers of comparative methods that use discrete data and also for exploratory analyses.
 
 The script accepts as inputs a species list file and lists of extracted environmental data for points (format is with occurrences in rows and environmental data in columns, no headers). These must be in the same directory as the script. The output is a csv containing the species labels and a numeric character coding from 0 to *k* - 1. 
 
