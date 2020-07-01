@@ -28,3 +28,9 @@ Approach
 Euclidean distances are calculated from all pairs of points between two species (100 randomly with replacement if the possible combinations are greater than this). The average of these is used to populated a species distance matrix. Finally, k-means clustering is applied to the matrix and a csv with the character coding (numerically from 0 to 1-k) is saved.
 
 It is assumed that missing data is coded. as -9999 and points with missing data in any variable are discarded.
+
+Explanation of Files
+---------
+* pno_discretization.py&mdash;Python script for habitat coding.
+* final_classification_k_7.csv&mdash;Result file for Saxifragales analysis.
+* final_classification_k_7_biogeobearsformat.csv&mdash;Result file for Saxifragales analysis, in a format ready to use for BioGeoBEARS. For the BioGeoBEARS run script, see [https://github.com/ryanafolk/biogeographic_coder] and change file paths appropriately to point to habitat classifications.
