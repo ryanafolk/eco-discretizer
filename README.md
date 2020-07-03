@@ -34,3 +34,4 @@ Explanation of Files
 * pno_discretization.py&mdash;Python script for habitat coding.
 * final_classification_k_7.csv&mdash;Result file for Saxifragales analysis.
 * final_classification_k_7_biogeobearsformat.csv&mdash;Result file for Saxifragales analysis, in a format ready to use for BioGeoBEARS. For the BioGeoBEARS run script, see [https://github.com/ryanafolk/biogeographic_coder] and change file paths appropriately to point to habitat classifications.
+* ultrametric_occur_matched_forcedultra.habitatclassificationmatched.tre&mdash;Tree used for BioGeoBEARS, with sampling matched to habitat classifications.
