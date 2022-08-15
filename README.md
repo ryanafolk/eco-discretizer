@@ -5,7 +5,7 @@ Overview
 ---------
 This script uses *k*-means clustering to discretize climatic datasets. The point is to convert continuous data to a discrete form that is useful for large numbers of comparative methods that use discrete data and also for exploratory analyses.
 
-The script accepts as inputs a species list file and lists of extracted environmental data for points (format is with occurrences in rows and environmental data in columns, no headers). These must be in the same directory as the script. The output is a csv containing the species labels and a numeric character coding from 0 to *k* - 1. 
+The script accepts as inputs a species list file `specieslist.csv` in the working directory (one species per line) and lists of extracted environmental data for points (format is with occurrences in rows and environmental data in columns, no headers). The naming format should be, e.g., `pno1_Species_a.csv`. These must be in the same directory as the script. The output is a csv containing the species labels and a numeric character coding from 0 to *k* - 1. 
 
 The distance matrices (raw and normalized) and k-means distortions are also saved in case they are useful for something. One idea is to plot the final averaged distance matrix in R, using a plot that makes sense like an MDS analysis. Classification surprises often happen when an individual is intermediate between an expected group and some neighbor.
 
@@ -22,6 +22,7 @@ where numberOfCategories is *k*, e.g.,
 ```
 ./pno_discretization.py 35 7
 ```
+
 
 Approach
 ---------
