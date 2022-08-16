@@ -36,3 +36,11 @@ Explanation of Files
 * final_classification_k_7.csv&mdash;Result file for Saxifragales analysis.
 * final_classification_k_7_biogeobearsformat.csv&mdash;Result file for Saxifragales analysis, in a format ready to use for BioGeoBEARS. For the BioGeoBEARS run script, see [https://github.com/ryanafolk/biogeographic_coder] and change file paths appropriately to point to habitat classifications.
 * ultrametric_occur_matched_forcedultra.habitatclassificationmatched.tre&mdash;Tree used for BioGeoBEARS, with sampling matched to habitat classifications.
+
+Possible errors
+---------
+`NameError: name 'process' is not defined` -- check for files that exist but are empty with `find . -size 0`.
+
+ `FileNotFoundError: [Errno 2] No such file or directory:` -- check if the listed species only has some files. specieslist.csv should only contain entries that have data for all variables.
+
+
