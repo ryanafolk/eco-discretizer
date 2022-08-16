@@ -129,14 +129,14 @@ for columnspecies in reduced_species:
 		for x in allpairs:
 			speciesdistancelist.append(distance.euclidean(x[0], x[1])) # n-dimensional distance 
 		speciesdistance = numpy.average(speciesdistancelist) # Average of pairwise distances
-		distanceDataFrame.set_value(rowspecies, columnspecies, speciesdistance) # Populate dataframe with distance
+		distanceDataFrame.at(rowspecies, columnspecies, speciesdistance) # Populate dataframe with distance
 
 print("Missing species are:")		
 print(missing_species)
 
 # Process and write the matrix
 for species in reduced_species: 
-	distanceDataFrame.set_value(species, species, None) # Clearing out the diagonal
+	distanceDataFrame.at(species, species, None) # Clearing out the diagonal
 distanceDataFrame.to_csv('./distancematrix.csv')
 
 kmeans_list = []
