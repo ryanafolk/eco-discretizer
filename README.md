@@ -1,7 +1,7 @@
 <span style="font-variant:small-caps;">Eco-discretizer</span>
 =========
 
-Note 12/16/24: Make sure that the output is not missing any surprise species. Try removing the species the script mentions as having been dropped from the input species list to fix this (it may be the data filtering function is acting up.
+Note 12/16/24: Make sure that the output is not missing any surprise species, for instance if species with lots of data do not show up in the output. Try removing the species the script mentions as having been dropped from the input species list to fix this (it may be the data filtering function is acting up; the total number of species could still be correct even if there is a problem).
 
 Overview
 ---------
