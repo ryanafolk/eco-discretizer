@@ -1,6 +1,8 @@
 <span style="font-variant:small-caps;">Eco-discretizer</span>
 =========
 
+Note 12/16/24: Make sure that the output is not missing any surprise species, for instance if species with lots of data do not show up in the output. Try removing the species the script mentions as having been dropped from the input species list to fix this (it may be the data filtering function is acting up; the total number of species could still be correct even if there is a problem).
+
 Overview
 ---------
 This script uses *k*-means clustering to discretize climatic datasets. The point is to convert continuous data to a discrete form that is useful for large numbers of comparative methods that use discrete data and also for exploratory analyses.
